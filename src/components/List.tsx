@@ -4,7 +4,7 @@ export const List = () => {
   return (
     <>
       <ul></ul>
-      <button>+</button>
+      <button onClick={() => {}}>+</button>
     </>
   );
 };
