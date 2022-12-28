@@ -5,10 +5,14 @@ export interface IItems {
 }
 export const List = () => {
   const [items, setItems] = useState<IItems[]>([]);
-
+  console.log(items);
   return (
     <>
-      <ul></ul>
+      <ul>
+        {items.map((items) => {
+          return <li>{items.name}</li>;
+        })}
+      </ul>
       <button
         onClick={() => {
           setItems((prev) => [...prev, { name: 'pierogi', status: 'done' }]);
