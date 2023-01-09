@@ -15,7 +15,7 @@ export const List = () => {
       </ul>
       <button
         onClick={() => {
-          setItems((prev) => [...prev, { name: 'pierogi', status: 'done' }]);
+          setItems((prev) => [...prev, { name: '', status: 'to-do' }]);
         }}
       >
         +
