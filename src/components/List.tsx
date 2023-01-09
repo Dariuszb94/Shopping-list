@@ -9,8 +9,11 @@ export const List = () => {
   return (
     <>
       <ul>
-        {items.map(({ name }) => (
-          <li>{name}</li>
+        {items.map(({ name, status }) => (
+          <li>
+            {name}
+            {status}
+          </li>
         ))}
       </ul>
       <button
