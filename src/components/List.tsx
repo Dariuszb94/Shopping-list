@@ -5,7 +5,7 @@ export interface IItems {
 }
 export const List = () => {
   const [items, setItems] = useState<IItems[]>([]);
-  console.log(items);
+
   return (
     <>
       <ul>
