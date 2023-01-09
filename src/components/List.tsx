@@ -9,8 +9,8 @@ export const List = () => {
   return (
     <>
       <ul>
-        {items.map((items) => (
-          <li>{items.name}</li>
+        {items.map(({ name }) => (
+          <li>{name}</li>
         ))}
       </ul>
       <button
