@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 export interface IItems {
   name: string;
   status: string;
