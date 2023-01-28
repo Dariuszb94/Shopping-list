@@ -25,6 +25,7 @@ export const List = () => {
       >
         +
       </button>
+      {showInput && <input></input>}
     </>
   );
 };
