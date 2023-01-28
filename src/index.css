@@ -3,3 +3,7 @@
   flex-direction: column;
   align-items: center;
 }
+.add-new {
+  display: flex;
+  gap: 8px;
+}

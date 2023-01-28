@@ -5,7 +5,6 @@ export interface IItems {
 }
 export const List = () => {
   const [items, setItems] = useState<IItems[]>([]);
-  const [showInput, SetShowInput] = useState(false);
 
   return (
     <>
@@ -17,15 +16,16 @@ export const List = () => {
           </li>
         ))}
       </ul>
-      <button
-        onClick={() => {
-          SetShowInput(true);
-          // setItems((prev) => [...prev, { name: '', status: 'to-do' }]);
-        }}
-      >
-        +
-      </button>
-      {showInput && <input placeholder='Add new'></input>}
+      <div className='add-new'>
+        <input placeholder='Add new'></input>{' '}
+        <button
+          onClick={() => {
+            // setItems((prev) => [...prev, { name: '', status: 'to-do' }]);
+          }}
+        >
+          +
+        </button>
+      </div>
     </>
   );
 };
