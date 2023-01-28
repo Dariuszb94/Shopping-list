@@ -10,6 +10,7 @@ export const List = () => {
   useEffect(() => {
     setNewItem('');
   }, [items]);
+
   return (
     <>
       <ul>
