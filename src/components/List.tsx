@@ -5,6 +5,7 @@ export interface IItems {
 }
 export const List = () => {
   const [items, setItems] = useState<IItems[]>([]);
+  const [newItem, setNewItem] = useState<string>('');
 
   return (
     <>
@@ -17,10 +18,14 @@ export const List = () => {
         ))}
       </ul>
       <div className='add-new'>
-        <input placeholder='Add new'></input>{' '}
+        <input
+          onChange={(e) => setNewItem(e.target.value)}
+          placeholder='Add new'
+          value={newItem}
+        ></input>
         <button
           onClick={() => {
-            // setItems((prev) => [...prev, { name: '', status: 'to-do' }]);
+            setItems((prev) => [...prev, { name: '', status: 'to-do' }]);
           }}
         >
           +
