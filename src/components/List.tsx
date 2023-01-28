@@ -25,7 +25,7 @@ export const List = () => {
       >
         +
       </button>
-      {showInput && <input></input>}
+      {showInput && <input placeholder='Add new'></input>}
     </>
   );
 };
