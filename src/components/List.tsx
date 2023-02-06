@@ -12,7 +12,7 @@ export const List = () => {
   }, [items]);
 
   return (
-    <>
+    <div>
       <ul>
         {items.map(({ name, status }) => (
           <li>
@@ -35,6 +35,6 @@ export const List = () => {
           +
         </button>
       </div>
-    </>
+    </div>
   );
 };
