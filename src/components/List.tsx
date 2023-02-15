@@ -1,8 +1,10 @@
 import { useEffect, useState } from 'react';
+
 export interface IItems {
   name: string;
   status: string;
 }
+
 export const List = () => {
   const [items, setItems] = useState<IItems[]>([]);
   const [newItem, setNewItem] = useState<string>('');
