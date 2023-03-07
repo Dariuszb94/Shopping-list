@@ -18,16 +18,15 @@ export const List = () => {
             {name}
             {status}
             {id}
-            {/* <button
+            <button
               onClick={() => {
-                setItems((prev) => [
-                  ...prev,
-                  { name: newItem, status: 'to-do' },
-                ]);
+                setItems((prev) => {
+                  return [...prev.filter((item) => item.id !== id)];
+                });
               }}
             >
               -
-            </button> */}
+            </button>
           </li>
         ))}
       </ul>
