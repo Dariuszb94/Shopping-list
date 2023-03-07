@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
-
-export interface IItems {
+interface IItems {
   name: string;
   status: string;
 }
