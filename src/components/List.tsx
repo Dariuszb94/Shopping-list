@@ -15,6 +15,16 @@ export const List = () => {
           <li>
             {name}
             {status}
+            <button
+              onClick={() => {
+                setItems((prev) => [
+                  ...prev,
+                  { name: newItem, status: 'to-do' },
+                ]);
+              }}
+            >
+              -
+            </button>
           </li>
         ))}
       </ul>
