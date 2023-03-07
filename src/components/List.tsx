@@ -1,7 +1,9 @@
 import { useEffect, useState } from 'react';
+import { uuid } from 'uuidv4';
 interface IItems {
   name: string;
   status: string;
+  id: string;
 }
 
 export const List = () => {
@@ -11,11 +13,12 @@ export const List = () => {
   return (
     <div>
       <ul>
-        {items.map(({ name, status }) => (
+        {items.map(({ name, status, id }) => (
           <li>
             {name}
             {status}
-            <button
+            {id}
+            {/* <button
               onClick={() => {
                 setItems((prev) => [
                   ...prev,
@@ -24,7 +27,7 @@ export const List = () => {
               }}
             >
               -
-            </button>
+            </button> */}
           </li>
         ))}
       </ul>
@@ -36,7 +39,10 @@ export const List = () => {
         ></input>
         <button
           onClick={() => {
-            setItems((prev) => [...prev, { name: newItem, status: 'to-do' }]);
+            setItems((prev) => [
+              ...prev,
+              { name: newItem, status: 'to-do', id: uuid() },
+            ]);
           }}
         >
           +
