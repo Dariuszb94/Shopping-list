@@ -17,7 +17,6 @@ export const List = () => {
           <li>
             {name}
             {status}
-            {id}
             <button
               onClick={() => {
                 setItems((prev) => {
