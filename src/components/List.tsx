@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { v4 as uuid } from 'uuid';
 interface IItems {
   name: string;
@@ -37,6 +37,7 @@ export const List = () => {
         ></input>
         <button
           onClick={() => {
+            setNewItem('');
             setItems((prev) => [
               ...prev,
               { name: newItem, status: 'to-do', id: uuid() },
