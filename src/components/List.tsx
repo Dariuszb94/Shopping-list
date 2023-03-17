@@ -8,13 +8,13 @@ interface IItems {
 
 export const List = () => {
   const [items, setItems] = useState<IItems[]>([]);
-  const [newItem, setNewItem] = useState<string>('');
+  const [newItem, setNewItem] = useState<string>('Add new');
 
   return (
     <div>
       <ul>
         {items.map(({ name, status, id }) => (
-          <li>
+          <li key={id}>
             {name}
             {status}
             <button
