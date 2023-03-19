@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { v4 as uuid } from 'uuid';
 interface IItems {
   name: string;
@@ -7,8 +7,19 @@ interface IItems {
 }
 
 export const List = () => {
-  const [items, setItems] = useState<IItems[]>([]);
   const [newItem, setNewItem] = useState<string>('Add new');
+  const [items, setItems] = useState<IItems[]>(() => {
+    const savedItem = localStorage.getItem('shoppingListItems');
+    if (savedItem === null) return [];
+    const parsedItem = JSON.parse(savedItem);
+    return parsedItem;
+  });
+
+  useEffect(() => {
+    if (!items.length) return;
+
+    localStorage.setItem('shoppingListItems', JSON.stringify(items));
+  }, [items]);
 
   return (
     <div>
