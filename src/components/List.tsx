@@ -12,6 +12,7 @@ export const List = () => {
     const savedItem = localStorage.getItem('shoppingListItems');
     if (savedItem === null) return [];
     const parsedItem = JSON.parse(savedItem);
+
     return parsedItem;
   });
 
