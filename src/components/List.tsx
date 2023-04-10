@@ -23,7 +23,7 @@ export const List = () => {
   }, [items]);
 
   return (
-    <div>
+    <section>
       <ul>
         {items.map(({ name, status, id }) => (
           <li key={id}>
@@ -59,6 +59,6 @@ export const List = () => {
           +
         </button>
       </div>
-    </div>
+    </section>
   );
 };
