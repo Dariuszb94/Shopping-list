@@ -10,6 +10,7 @@ export const List = () => {
   const [newItem, setNewItem] = useState<string>('Add new');
   const [items, setItems] = useState<IItems[]>(() => {
     const savedItem = localStorage.getItem('shoppingListItems');
+
     if (savedItem === null) return [];
     const parsedItem = JSON.parse(savedItem);
 
