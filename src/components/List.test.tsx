@@ -4,5 +4,5 @@ import { List } from './List';
 it('CheckboxWithLabel changes the text after click', () => {
   const { queryByLabelText } = render(<List />);
 
-  expect(queryByLabelText(/on/i)).toBeTruthy();
+  expect(queryByLabelText(/send/i)).toBeTruthy();
 });
