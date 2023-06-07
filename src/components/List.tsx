@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import { v4 as uuid } from 'uuid';
 interface IItems {
   name: string;
   status: string;
@@ -53,7 +52,11 @@ export const List = () => {
             setNewItem('');
             setItems((prev) => [
               ...prev,
-              { name: newItem, status: 'to-do', id: uuid() },
+              {
+                name: newItem,
+                status: 'to-do',
+                id: String(Math.floor(Math.random() * 9999)),
+              },
             ]);
           }}
         >
