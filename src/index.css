@@ -8,7 +8,7 @@
   gap: 8px;
 }
 
-.delete {
+:is(.delete, .add) {
   align-items: center;
   background-color: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.1);
@@ -36,18 +36,18 @@
   margin-left: 8px;
 }
 
-.delete:hover,
-.delete:focus {
+:is(.delete, .add):hover,
+:is(.delete, .add):focus {
   border-color: rgba(0, 0, 0, 0.15);
   box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
   color: rgba(0, 0, 0, 0.65);
 }
 
-.delete:hover {
+:is(.delete, .add):hover {
   transform: translateY(-1px);
 }
 
-.delete:active {
+:is(.delete, .add):active {
   background-color: #f0f0f1;
   border-color: rgba(0, 0, 0, 0.15);
   box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;

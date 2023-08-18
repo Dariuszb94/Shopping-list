@@ -49,6 +49,7 @@ export const List = () => {
           value={newItem}
         ></input>
         <button
+          className='add'
           onClick={() => {
             setNewItem('');
             setItems((prev) => [
