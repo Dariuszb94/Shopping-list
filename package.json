@@ -21,7 +21,9 @@
     "build": "react-scripts build",
     "eject": "react-scripts eject",
     "test": "jest",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watch",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [

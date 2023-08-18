@@ -30,6 +30,7 @@ export const List = () => {
             {name}
             {status}
             <button
+              className='delete'
               onClick={() => {
                 setItems((prev) => {
                   return [...prev.filter((item) => item.id !== id)];
