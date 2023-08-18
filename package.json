@@ -2,7 +2,7 @@
   "name": "shopping-list",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://Dariuszb94.github.io/to-do-list",
+  "homepage": "https://Dariuszb94.github.io/Shopping-list",
   "dependencies": {
     "@testing-library/user-event": "^13.5.0",
     "@types/node": "^16.18.10",
