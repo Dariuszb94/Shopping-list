@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 interface IItems {
   name: string;
-  status: string;
   id: string;
 }
 
@@ -25,10 +24,9 @@ export const List = () => {
   return (
     <section>
       <ul>
-        {items.map(({ name, status, id }) => (
+        {items.map(({ name, id }) => (
           <li key={id}>
             {name}
-            {status}
             <button
               className='delete'
               onClick={() => {
@@ -56,7 +54,6 @@ export const List = () => {
               ...prev,
               {
                 name: newItem,
-                status: 'to-do',
                 id: String(Math.floor(Math.random() * 9999)),
               },
             ]);
